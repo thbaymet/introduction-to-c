@@ -5,6 +5,7 @@
 //
 int syracuseV1(int k);
 int syracuseV2(int k);
+int cc1exo2();
 
 int main() {
     printf("Bienvenue dans le programme d'affichage de suite de Syracuse\n");
@@ -52,4 +53,25 @@ int syracuseV2(int k) {
     }
     printf("u(%d)=%d ", n, u);
     printf("\nL'indice du premier terme de la suite égal à 1: %d", n);
+}
+
+int cc1exo2() {
+#define LIMIT 10
+    int a, b, i, x;
+    a = 5;
+    b = 12;
+
+    for (i = a; i < b; i++) {
+        if (i == LIMIT) {
+            break;
+        }
+         x = (i % 2 == 0) ? a : b;
+
+        if (x == a) {
+            continue;
+        }
+
+        printf("%d_", i);
+    }
+    return 0;
 }
